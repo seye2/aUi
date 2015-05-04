@@ -10,28 +10,21 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
 	<script src="../../js/accordion/accordion.js"></script>
 
 	<style type="text/css">
-	.panel {margin-bottom: 20 px;background-color: #fff;border:1px solid transparent;border-radius: 4px; -webkit-box-shadow: 0 1 px 1 px rgba(0, 0, 0, .05);box-shadow: 0 1 px 1 px rgba(0, 0, 0, .05)}
-	.panel-body {padding:15px}
-	.panel-heading {padding: 10 px 15 px;border-bottom: 1 px solid transparent;border-top-right-radius: 3 px;border-top-left-radius: 3 px}
-	.panel-footer {padding: 10 px 15 px;background-color: #f5f5f5;border-top: 1 px solid# ddd;border-bottom-right-radius: 3 px;border-bottom-left-radius: 3 px}
-	.panel-default {border-color: #ddd}
-
-	.collapse {display: none}
-	.collapse.in {display: block}
-	.collapsing {position: relative;height: 0;overflow: hidden;
-		-webkit-transition: height.35 s ease;transition: height.35 s ease
-    }
+		.collapse:first-child{display:block !important;}
 	</style>
 </head>
 <body>
 	<div ng-app="aUi.component.accordion">
-		<div collapse collapse-panel-id="collapse-panel" collapse-panel-body-id="collapse-panel-body">
+		<div 
+			collapse
+			collapse-panel-id="collapse-panel"
+			collapse-panel-body-id="collapse-panel-body"
+		>
 		</div>
 	</div>
 </body>
