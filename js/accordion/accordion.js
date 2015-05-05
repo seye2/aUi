@@ -11,10 +11,10 @@ angular.module('aUi.component.accordion',[])
 			'C' - only matches class name
 			*/
 			restrict:'EA',
-				/*
-				? – Will not raise any error if a mentioned directive does not exist.
-				^ – Will look for the directive on parent elements, if not available on the same element.
-				*/
+			/*
+			? – Will not raise any error if a mentioned directive does not exist.
+			^ – Will look for the directive on parent elements, if not available on the same element.
+			*/
 			require:'?accData',
 			scope:{
 				/*
@@ -22,12 +22,24 @@ angular.module('aUi.component.accordion',[])
 				2. "="   ( Direct model binding / two-way binding )
 				3. "&"   ( Behaviour binding / Method binding  )
 				*/
-				accData:'='
+				accData:'=',
+				ngModel:'='
 			},
 			templateUrl:'../../template/accordion/accordion.html',
 			link:function(scope, el, attrs) {
 				scope.panelBaseId=attrs.collapsePanelBodyId;
 				scope.panelId=attrs.collapsePanelId;
+		
+				//function to 'open' a tab
+				scope.tabStatus = function() {
+					var target=$(event.target).closest('.panel').find('.panel-collapse');
+					
+					if(target.attr('class').match('expand')) {
+						target.removeClass('expand');
+					} else {
+						target.addClass('expand');
+					}
+				}
 			}
 
 		};
@@ -47,7 +59,6 @@ angular.module('aUi.component.accordion',[])
 	})
 	//control scope
 	.controller('accController',function($http,$scope,accFactory) {
-		$scope.activeTabs=[];
 
 		//get data
 		var accAPI=accFactory.getData();
@@ -55,25 +66,17 @@ angular.module('aUi.component.accordion',[])
 			$scope.accData=data;
 		});
 
-		//check if the tab is active
-		$scope.isOpenTab=function(tab) {
-			if($scope.activeTabs.indexOf(tab) > -1) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-		
-		//function to 'open' a tab
-		$scope.openTab = function(tab) {
-			if($scope.isOpenTab(tab)) {
-				//if it is, remove it from the activeTabs array
-				$scope.activeTabs.splice($scope.activeTabs.indexOf(tab),1);
-			} else {
-				//if it's not, add it!
-				$scope.activeTabs.push(tab);
-			}
-		}
+		//add Item
+		$scope.addItem = function() {
+			$scope.accData.push({
+				"title": $scope.title,
+				"contents": $scope.content
+			});
+
+			$scope.title = '';
+			$scope.content = '';
+
+		};
 
 	})
 
