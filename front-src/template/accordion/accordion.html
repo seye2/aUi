@@ -1,0 +1,25 @@
+<div class="panel-group" id="{{panelId}}" ng-controller="accController">
+	<div id="collapse-add-form">
+		 <input ng-model="title" type="text" placeholder="Collapse Panel Title">
+		 <div>
+			<textarea ng-model="content" placeholder="Collapse Panel Content"></textarea>
+		</div>
+		<button ng-click="addItem()">Add Item</button>
+	</div>
+
+	<div class="panel panel-default" ng-repeat="data in accData">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a href="#none" ng-click="tabStatus('tab tab'+$index)">{{data.title}}</a>
+			</h4>
+		</div>
+
+		<div id="{{panelBaseId}}-1" class="panel-collapse collapse">
+			<div class="panel-body">
+				{{data.contents}}
+			</div>	
+		</div>
+	</div>
+
+</div>
+
