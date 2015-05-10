@@ -1,0 +1,38 @@
+{
+  "name": "aUi",
+  "version": "0.0.1",
+  "description": "aUi module",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.8.11"
+  },
+  "devDependencies": {
+    "express": "^4.12.3",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-cache": "^0.2.9",
+    "gulp-compass": "^2.0.4",
+    "gulp-concat": "^2.5.2",
+    "gulp-jshint": "^1.10.0",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seye2/aUi.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "seye2",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seye2/aUi/issues"
+  },
+  "homepage": "https://github.com/seye2/aUi"
+}
