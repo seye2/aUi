@@ -54,7 +54,7 @@ $ npm install
 $ bower install
 </pre>
 
-<strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 실행해 주면 된다.</strong>
+<strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 재설치해 주시면 됩니다.</strong>
 
 ###front javascript 설치
 
