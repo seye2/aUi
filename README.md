@@ -38,7 +38,7 @@ $ sudo apt-get install node
 
 nodejs 버전을 확인 할 수 있습니다.
 <pre>
-$ node --version
+$ sudo node --version
 $ v0.12.0
 </pre>
 
