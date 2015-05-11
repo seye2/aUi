@@ -42,15 +42,6 @@ $ sudo node --version
 $ v0.12.0
 </pre>
 
-###front javascript 설치
-
-bower설치 리스트(bower.json)
-<ul>
-<li>jQuery1.11.1</li>
-<li>angularJS1.3.15</li>
-<li>lodash3.8.0</li>
-</ul>
-
 gulp/bower설치
 <pre>
 $ sudo npm install -g gulp
@@ -62,6 +53,15 @@ $ sudo npm install -g bower
 $ npm install
 $ bower install
 </pre>
+
+###front javascript 설치
+
+bower설치 리스트(bower.json)
+<ul>
+<li>jQuery1.11.1</li>
+<li>angularJS1.3.15</li>
+<li>lodash3.8.0</li>
+</ul>
 
 ##aUI
 
