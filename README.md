@@ -30,8 +30,9 @@ $ sudo apt-get upgrade
 $ sudo apt-get update
 </pre>
 
-nodejs를 install 합니다.
+내 라즈베리파이의 /etc/apt/sources.list file을 apt.adafruit.com package repository에 추가해주고 난 후 ,nodejs를 install 합니다.
 <pre>
+$ curl -sLS https://apt.adafruit.com/add | sudo bash
 $ sudo apt-get install node
 </pre>
 
@@ -51,6 +52,7 @@ bower설치 리스트(bower.json)
 </ul>
 
 <pre>
+$ npm install
 $ bower install
 </pre>
 
