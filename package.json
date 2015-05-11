@@ -4,22 +4,31 @@
   "description": "aUi module",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.8.11"
+    "body-parser": "^1.12.4",
+    "connect-livereload": "^0.5.3",
+    "ejs": "^2.3.1",
+    "express": "^4.12.3"
   },
   "devDependencies": {
-    "express": "^4.12.3",
+    "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-cache": "^0.2.9",
     "gulp-compass": "^2.0.4",
     "gulp-concat": "^2.5.2",
+    "gulp-express": "^0.3.5",
     "gulp-jshint": "^1.10.0",
+    "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.0",
     "gulp-uglify": "^1.2.0",
-    "gulp-util": "^3.0.4"
+    "gulp-util": "^3.0.4",
+    "tiny-lr": "^0.1.5"
   },
   "scripts": {
+    "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

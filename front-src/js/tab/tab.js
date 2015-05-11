@@ -24,7 +24,7 @@ angular.module('aUi.component.tab',[])
 				*/
 				tabData:'='
 			},
-			templateUrl:'../../template/tab/tab.html',
+			templateUrl:'/front-src/template/tab/tab.html',
 			link:function(scope, el, attrs) {
 
 				//function to 'open' a tab
@@ -47,7 +47,7 @@ angular.module('aUi.component.tab',[])
 		var tabAPI = {};
 
 		tabAPI.getData = function() {
-		  return $http.get('../../data/tab.json');
+		  return $http.get('/front-src/data/tab.json');
 		}
 
 		return tabAPI;

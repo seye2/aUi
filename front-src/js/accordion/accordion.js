@@ -25,7 +25,7 @@ angular.module('aUi.component.accordion',[])
 				accData:'=',
 				ngModel:'='
 			},
-			templateUrl:'../../template/accordion/accordion.html',
+			templateUrl:'/front-src/template/accordion/accordion.html',
 			link:function(scope, el, attrs) {
 				scope.panelBaseId=attrs.collapsePanelBodyId;
 				scope.panelId=attrs.collapsePanelId;
@@ -51,7 +51,7 @@ angular.module('aUi.component.accordion',[])
 		var accAPI = {};
 
 		accAPI.getData = function() {
-		  return $http.get('../../data/accordion.json');
+		  return $http.get('/front-src/data/accordion.json');
 		}
 
 		return accAPI;
