@@ -63,6 +63,7 @@ bower설치 리스트(bower.json)
 <li>jQuery1.11.1</li>
 <li>angularJS1.3.15</li>
 <li>lodash3.8.0</li>
+<li>slick-carousel1.5.0</li>
 </ul>
 
 ##aUI
