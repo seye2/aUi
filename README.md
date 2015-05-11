@@ -30,16 +30,31 @@ $ sudo apt-get upgrade
 $ sudo apt-get update
 </pre>
 
-nodejs를 install 합니다.
+내 라즈베리파이의 /etc/apt/sources.list file을 apt.adafruit.com package repository에 추가해주고 난 후 ,nodejs를 install 합니다.
 <pre>
+$ curl -sLS https://apt.adafruit.com/add | sudo bash
 $ sudo apt-get install node
 </pre>
 
 nodejs 버전을 확인 할 수 있습니다.
 <pre>
-$ node --version
+$ sudo node --version
 $ v0.12.0
 </pre>
+
+gulp/bower설치
+<pre>
+$ sudo npm install -g gulp
+$ sudo npm install -g bower
+</pre>
+
+관련 패키지 설치
+<pre>
+$ npm install
+$ bower install
+</pre>
+
+<strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 재설치해 주시면 됩니다.</strong>
 
 ###front javascript 설치
 
@@ -48,11 +63,8 @@ bower설치 리스트(bower.json)
 <li>jQuery1.11.1</li>
 <li>angularJS1.3.15</li>
 <li>lodash3.8.0</li>
+<li>slick-carousel1.5.0</li>
 </ul>
-
-<pre>
-$ bower install
-</pre>
 
 ##aUI
 
