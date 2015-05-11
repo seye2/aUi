@@ -51,6 +51,13 @@ bower설치 리스트(bower.json)
 <li>lodash3.8.0</li>
 </ul>
 
+gulp/bower설치
+<pre>
+$ sudo npm install -g gulp
+$ sudo npm install -g bower
+</pre>
+
+관련 패키지 설치
 <pre>
 $ npm install
 $ bower install
