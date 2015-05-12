@@ -87,7 +87,7 @@ bower설치 리스트(bower.json)
 $ gulp
 </pre>
 
-### 서버를 죽인 후(CTRL+C)에 <strong style="color:red">Error: listen EADDRINUSE</strong>에러가 발생시는
+### 서버를 죽인 후에(CTRL+C) gulp 재시작 시 <strong style="color:red">Error: listen EADDRINUSE</strong> 에러 발생 시는
 <pre>
 $ ps -ef | grep node
 pi        2451     1  0 02:19 pts/0    00:00:04 node app.js
