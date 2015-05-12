@@ -7,7 +7,8 @@ var express = require('express')
     , http=require('http')
     , path = require('path')
     , bodyParser = require('body-parser')
-    , app = express();
+    , app = express()
+    , engine = require('express-dot-engine');
 
 app.set('port', process.env.PORT || 8080);
 
@@ -19,6 +20,10 @@ app.use(bodyParser.json())
 
 //set link root
 app.use(express.static(__dirname));
+
+app.engine('dot', engine.__express);
+app.set('views', path.join(__dirname, '/front-src/dotjs/views/'));
+app.set('view engine', 'dot');
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/front-src/index.html'));
@@ -34,6 +39,10 @@ app.get('/tab', function(req, res) {
 
 app.get('/carousel', function(req, res) {
     res.sendFile(path.join(__dirname + '/front-src/html/carousel/carousel.html'));
+});
+
+app.get('/dotjs', function(req, res) {
+    res.render('index', { fromServer: 'Hello from server' });
 });
 //app.get('/users', user.list);
 
