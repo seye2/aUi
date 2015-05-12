@@ -10,6 +10,8 @@
     "express": "^4.12.3"
   },
   "devDependencies": {
+    "compass": "^0.1.1",
+    "express-dot-engine": "^1.0.6",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
     "gulp-cache": "^0.2.9",
@@ -19,7 +21,6 @@
     "gulp-jshint": "^1.10.0",
     "gulp-livereload": "^3.8.0",
     "gulp-minify-css": "^1.1.1",
-    "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.0",

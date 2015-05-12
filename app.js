@@ -13,10 +13,10 @@ var express = require('express')
 app.set('port', process.env.PORT || 8080);
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 //set link root
 app.use(express.static(__dirname));
@@ -39,6 +39,10 @@ app.get('/tab', function(req, res) {
 
 app.get('/carousel', function(req, res) {
     res.sendFile(path.join(__dirname + '/front-src/html/carousel/carousel.html'));
+});
+
+app.get('/box_shadow', function(req, res) {
+    res.sendFile(path.join(__dirname + '/front-src/html/scss/box_shadow.html'));
 });
 
 app.get('/dotjs', function(req, res) {
