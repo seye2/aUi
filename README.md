@@ -111,6 +111,8 @@ $ gulp
 확인 URL
 [http://localhost:8080](http://localhost:8080)
 
+** image sprite, js compress 추가
+
 ##aUI
 
 ###collapse
