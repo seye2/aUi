@@ -46,6 +46,33 @@ app.get('/dotjs', function(req, res) {
 });
 //app.get('/users', user.list);
 
+
+app.get('/layout', function(req, res) {
+    res.render('layout/index');
+});
+
+app.get('/cascade', function(req, res) {
+    res.render('cascade/me');
+});
+
+app.get('/partial', function(req, res) {
+    res.render('partial/index');
+});
+
+app.get('/helper', function(req, res) {
+
+    // helper as a property
+    engine.helper.myHelperProperty = 'Hello from server property helper';
+
+    // helper as a method
+    engine.helper.myHelperMethod = function(param) {
+        return 'Hello from server method helper (parameter: ' + param + ', server model: ' + this.model.fromServer + ')';
+    }
+
+    res.render('helper/index', { fromServer: 'Hello from server', });
+});
+
+
 http.createServer(app).listen(app.get('port'), function(){
     console.log("Express server listening on port " + app.get('port'));
 });
