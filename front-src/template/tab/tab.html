@@ -1,13 +1,14 @@
+<div ng-controller="tabController" class="tab">
 
-<div class="list-tab" ng-class="{'tab-first':$first}" ng-repeat="model in tabData">
-	<div class="tab-wrap tab{{$index}}">
+	<div class="list-tab" ng-class="{'tab-first':$first}" ng-repeat="model in tabData">
+		<div class="tab-wrap tab{{$index}}">
 
-		<h3 ng-class="{'head-active':$first}"><a href="#" ng-click="selectTab()">{{model.title}}</a></h3>
+			<h3 ng-class="{'head-active':$first}"><a href="#" ng-click="selectTab()">{{model.title}}</a></h3>
 
-		<div ng-class="{'panel-active':$first}" ng-tab-body="animated bounceInLeft" class="tab-panel panel-tab{{$index}}">
-			{{model.contents}}
+			<div ng-class="{'panel-active':$first}" ng-tab-body="animated bounceInLeft" class="tab-panel panel-tab{{$index}}">
+				{{model.contents}}
+			</div>
+
 		</div>
-
 	</div>
-</div>
 </div>
