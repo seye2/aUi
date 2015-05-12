@@ -56,6 +56,11 @@ $ bower install
 
 <strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 재설치해 주시면 됩니다.</strong>
 
+###dotjs
+[express-dot-engine](https://www.npmjs.com/package/express-dot-engine)
+dot은 layouts, partials를 지원하는 매우 빠른 template입니다.
+사용법은 위의 링크를 참고하시면 됩니다.
+
 ###front javascript 설치
 
 bower설치 리스트(bower.json)
@@ -74,7 +79,7 @@ $ gulp
 확인 URL
 [http://localhost:8080](http://localhost:8080)
 
-<strong>추후 ejs, sass, compass 설정 예정</strong>
+<strong>추후 sass, compass 설정 예정</strong>
 
 ##aUI
 
