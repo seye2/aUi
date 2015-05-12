@@ -14,6 +14,12 @@ aUi는 angularJS template module입니다.
         ├── js                      # jquery, angular, lodash
         ├── data                    # json data
         └── images                  # all images
+        
+    ├── dev                         # temp
+        ├── scss                    # sass(convert css image by compass)
+        ├── js                      # original js(convert compress js)
+        ├── images                  # original image(convert sprite image by compass)
+        
     ├── bower.json                  # front-src javascript (bower install)
     ├── package.json                # gulp install list (npm install)
     ├── gulpfile.js                 # use gulp package (automatic server)
@@ -56,6 +62,12 @@ $ bower install
 
 <strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 재설치해 주시면 됩니다.</strong>
 
+###Sass
+/dev/scss 폴더 내에 Sass를 구현하고 나면 front-src/css폴더에 <strong>파일명.min.css</strong>로 css 파일을 컴파일합니다.
+
+###compass
+
+
 ###dotjs
 dot은 layouts, partials를 지원하는 매우 빠른 template입니다.
 사용법은 위의 [링크](https://www.npmjs.com/package/express-dot-engine)를 참고하시면 됩니다.
@@ -74,6 +86,15 @@ bower설치 리스트(bower.json)
 <pre>
 $ gulp
 </pre>
+
+### 서버를 죽인 후(CTRL+C)에 <strong style="color:red">Error: listen EADDRINUSE</strong>에러가 발생시는
+<pre>
+$ ps -ef | grep node
+pi        2451     1  0 02:19 pts/0    00:00:04 node app.js
+$ kill -9 2451
+$ gulp
+</pre>
+위와 같이 프로세스 확인 후 PID값을 사용해 강제 종료하고 재시작 한다.
 
 확인 URL
 [http://localhost:8080](http://localhost:8080)
