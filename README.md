@@ -8,7 +8,9 @@ aUi는 angularJS template module입니다.
 ##폴더 구조 / 설명
     .
     ├── front-src                   # HTML,CSS, Javascript files
+        ├── dotjs               # express-dot-engine example
         ├── html                    # all HTML
+            ├── scss                # sass,compass example
         ├── template                # piece of angular html (contents)
         ├── css                     # all css
         ├── js                      # jquery, angular, lodash
