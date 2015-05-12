@@ -66,6 +66,16 @@ bower설치 리스트(bower.json)
 <li>slick-carousel1.5.0</li>
 </ul>
 
+웹서버 실행(node,express,gulp)
+<pre>
+$ gulp
+</pre>
+
+확인 URL
+[http://localhost:8080](http://localhost:8080)
+
+<strong>추후 ejs, sass, compass 설정 예정</strong>
+
 ##aUI
 
 ###collapse
