@@ -57,9 +57,8 @@ $ bower install
 <strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 재설치해 주시면 됩니다.</strong>
 
 ###dotjs
-[express-dot-engine](https://www.npmjs.com/package/express-dot-engine)
 dot은 layouts, partials를 지원하는 매우 빠른 template입니다.
-사용법은 위의 링크를 참고하시면 됩니다.
+사용법은 위의 [링크](https://www.npmjs.com/package/express-dot-engine)를 참고하시면 됩니다.
 
 ###front javascript 설치
 
