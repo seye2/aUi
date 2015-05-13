@@ -65,7 +65,7 @@ $ bower install
 <strong>* lisass가 에러가 난다면 <pre>$ npm install gulp-sass --save-dev</pre>를 재설치해 주시면 됩니다.</strong>
 
 ###Sass
-/dev/scss 폴더 내에 Sass를 구현하고 나면 front-src/css폴더에 <strong>파일명.css</strong>로 css 파일을 컴파일합니다.
+/dev/scss 폴더 내에 Sass를 구현하고 나면 front-src/css폴더에 <strong>파일명.css</strong>로 scss 파일을 컴파일합니다.
 
 ###compass
 compass가 깔려있지 않다면 rubygem을 사용하여 compass를 install 해줍니다.
