@@ -45,6 +45,10 @@ app.get('/box_shadow', function(req, res) {
     res.sendFile(path.join(__dirname + '/front-src/html/scss/box_shadow.html'));
 });
 
+app.get('/bezier', function(req, res) {
+    res.sendFile(path.join(__dirname + '/front-src/html/scss/bezier.html'));
+});
+
 app.get('/dotjs', function(req, res) {
     res.render('index', { fromServer: 'Hello from server' });
 });

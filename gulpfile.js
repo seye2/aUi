@@ -12,10 +12,23 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
-var livereload = require('gulp-livereload');
 var plumber = require('gulp-plumber');
 var cache = require('gulp-cache');
+var imagemin = require('imagemin');
 var path = require('path');
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+
+gulp.task('serve',['styles','scripts','images'], function() {
+    browserSync.init(['front-src/html/**/*.html','dev/js/*.js','dev/images/*'],{
+        baseDir:'./'
+    });
+
+    gulp.watch(['front-src/html/**/*.html'], browserSync.reload);
+    gulp.watch(['dev/scss/*.scss'], ['styles']);
+    gulp.watch(['dev/js/*.js'], ['scripts']).on('change', browserSync.reload);
+    gulp.watch(['dev/images/*'], ['images']).on('change', browserSync.reload);
+});
 
 gulp.task('server', function () {
     // Start the server at the beginning of the task
@@ -31,54 +44,48 @@ gulp.task('styles', function() {
             image: 'front-src/images'
         }))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-        .pipe(gulp.dest('front-src/css/'));
+        .pipe(gulp.dest('front-src/css'))
+        .pipe(browserSync.reload({stream: true}));
 });
+
 // Scripts
 gulp.task('scripts', function() {
-    return gulp.src('/dev/js/**/*.js')
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest('/front-src/js'))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
-        .pipe(gulp.dest('/front-src/js'));
+    return gulp.src('dev/js/*.js')
+        .pipe(uglify({mangle: false}))//syntax error at angular compress, so add option(mangle:false)
+        .pipe(rename({ extname: '.min.js' }))
+        .pipe(gulp.dest('front-src/js'));
 });
 
 // Images
 gulp.task('images', function() {
-    return gulp.src('/front-src/images/*')
+    return gulp.src('dev/images')
         .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-        .pipe(gulp.dest('/dev/images'));
+        .pipe(gulp.dest('front-src/images'));
 });
 
 // Watch
-gulp.task('watch', function() {
+/*
+gulp.task('watch',['serve'], function() {
 
     // Watch .scss files
-    gulp.watch('dev/scss/*.scss', ['compass']);
-    /*
-     // Watch .js files
-     gulp.watch('/dev/js/*.js', ['scripts']);
+    gulp.watch('dev/scss/*.scss', ['styles']);
 
-     // Watch image files
-     gulp.watch('/dev/images/*', ['images']);
+    // Watch .js files
+    gulp.watch('dev/js/*.js', ['scripts']);
 
-     // Create LiveReload server
-     livereload.listen();
-
-     // Watch any files in dist/, reload on change
-     gulp.watch(['/dev/**']).on('change', livereload.changed);
-     */
-
+    // Watch image files
+    gulp.watch('dev/images/*', ['images']);
 });
+ */
 
-gulp.task('default', ['watch','styles','scripts','server'], function() {});
+gulp.task('default', ['styles','scripts','server','images','serve'], function() {});
 
 ////////////////////////////////////////////////////////////////////////////////
 // INSTALL
 ////////////////////////////////////////////////////////////////////////////////
 /*
  gulp.task('install', function() {
- return gulp.src('./bower.json')
+ return gulp.src('bower.json')
  .pipe(install());
  });
 */
