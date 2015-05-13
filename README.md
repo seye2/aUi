@@ -80,6 +80,9 @@ $ gem install compass
 
 유용한 기능인 이미지 스프라이트는 계속해서 예제를 올릴 예정입니다.
 
+###JS
+/dev/js 폴더 내에 js를 구현하고 나면 front-src/js폴더에 <strong>파일명.min.js</strong>로 파일을 압축합니다.
+
 ###dotjs
 dot은 layouts, partials를 지원하는 매우 빠른 template입니다.
 사용법은 위의 [링크](https://www.npmjs.com/package/express-dot-engine)를 참고하시면 됩니다.
@@ -127,7 +130,7 @@ $ gulp
 확인 URL
 [http://localhost:8080](http://localhost:8080)
 
-** image sprite, js compress 추가
+** image sprite 추가, angular modal 모듈 추가
 
 ##aUI
 
