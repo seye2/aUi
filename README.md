@@ -12,8 +12,8 @@ aUi는 angularJS template module입니다.
         ├── html                    # all HTML
             ├── scss                # sass,compass example
         ├── template                # piece of angular html (contents)
-        ├── css                     # all css
-        ├── js                      # jquery, angular, lodash
+        ├── css                     # compress all css
+        ├── js                      # compress jquery, angular, lodash
         ├── data                    # json data
         └── images                  # all images
         
