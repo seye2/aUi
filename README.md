@@ -84,6 +84,22 @@ $ gem install compass
 dot은 layouts, partials를 지원하는 매우 빠른 template입니다.
 사용법은 위의 [링크](https://www.npmjs.com/package/express-dot-engine)를 참고하시면 됩니다.
 
+###browser-sync
+서버에 있는 HTML/css/js/images 파일들을 웹/모바일 브라우져와 동기와 시켜주는 프로그램이다.
+[browsersync동영상](http://www.browsersync.io/)
+동영상에서 보는 것처럼 동일한 url을 가지고 서버 코드를 수정하면 내용을 동기화 시켜준다.
+npm으로 설치 후
+
+HTML하단 </body>태그 위에 아래와 같이 스크립트 코드를 넣어준다.
+
+<script type='text/javascript' id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.7.1.js'><\/script>".replace("HOST", location.hostname));
+    //]]>\
+</script>
+
+<strong>**서버를 껐다 다시 켰을 때는 브라우져 또한 새탭(새브라우져)에서 url을 다시 입력해 주어야 동기화 된다.
+
 ###front javascript 설치
 
 bower설치 리스트(bower.json)
