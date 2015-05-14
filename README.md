@@ -84,7 +84,7 @@ $ sudo gem install sass
 ###compass
 compass가 깔려있지 않다면 rubygem을 사용하여 compass를 install 해줍니다.
 <pre>
-$ sudo gem install compass
+$ sudo gem install compass -V
 </pre>
 
 자세한 설치 내용은 [compass 설치](https://www.npmjs.com/package/gulp-compass)에서 확인 하시면 됩니다.
