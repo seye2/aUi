@@ -56,9 +56,10 @@ $ sudo npm install -g gulp
 $ sudo npm install -g bower
 </pre>
 
-install rubygem(sass,compass)
+install ruby gem(sass,compass)
 <pre>
 $ sudo apt-get install ruby
+$ sudo apt-get install ruby-compass
 $ sudo apt-get install ruby gems
 </pre>
 
