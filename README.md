@@ -58,6 +58,7 @@ $ sudo npm install -g bower
 
 install rubygem(sass,compass)
 <pre>
+$ sudo apt-get install ruby
 $ sudo apt-get install ruby gems
 </pre>
 
@@ -84,7 +85,7 @@ $ sudo gem install sass
 ###compass
 compass가 깔려있지 않다면 rubygem을 사용하여 compass를 install 해줍니다.
 <pre>
-$ sudo gem install compass -V
+$ sudo gem install compass
 </pre>
 
 자세한 설치 내용은 [compass 설치](https://www.npmjs.com/package/gulp-compass)에서 확인 하시면 됩니다.
