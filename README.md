@@ -5,6 +5,8 @@ aUi는 angularJS template module입니다.
 현재 collapse, tab, slick-slider(slider)가 만들어져 있습니다.
 관련해서 기능을 추가할 예정입니다.
 
+[예제 URL](http://seye2.iptime.org:8000/)
+
 ##폴더 구조 / 설명
     .
     ├── front-src                   # HTML,CSS, Javascript files
