@@ -10,7 +10,7 @@ angular.module('aUi.component.accordion',[])
 			'E' - only matches element name
 			'C' - only matches class name
 			*/
-			restrict:'EA',
+			restrict:'A',
 			/*
 			? – Will not raise any error if a mentioned directive does not exist.
 			^ – Will look for the directive on parent elements, if not available on the same element.

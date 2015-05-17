@@ -12,7 +12,6 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifycss = require('gulp-minify-css');
-var plumber = require('gulp-plumber');
 var cache = require('gulp-cache');
 var imagemin = require('imagemin');
 var path = require('path');
@@ -64,7 +63,6 @@ gulp.task('images', function() {
 });
 
 // Watch
-/*
 gulp.task('watch',['serve'], function() {
 
     // Watch .scss files
@@ -76,7 +74,6 @@ gulp.task('watch',['serve'], function() {
     // Watch image files
     gulp.watch('dev/images/*', ['images']);
 });
- */
 
 gulp.task('default', ['styles','scripts','server','images','serve'], function() {});
 

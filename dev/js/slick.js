@@ -3,7 +3,7 @@
 angular.module('aUi.component',['aUi.component.carousel']);
 angular.module('aUi.component.carousel',[]).directive('slick',function($timeout) {
     return {
-        restrict: 'AEC',
+        restrict: 'AE',
         scope: {
             accessibility: '@',
             arrows: '@',

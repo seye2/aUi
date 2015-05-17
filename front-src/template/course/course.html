@@ -1,0 +1,25 @@
+<div class="row">
+	검색 학습: <input type="text" ng-model="courseFilter" />
+	&nbsp;&nbsp;&nbsp;
+	정렬:
+	<select ng-model="sortExpression">
+		<option value="level">Level</option>
+		<option value="topic">Topic</option>
+		<option value="category">Category</option>
+		<option value="rating">Rating</option>
+	</select>
+	<div class="right"><input type="checkbox" ng-model="showFirstCourses" />처음 3개 학습 보이기</div>
+</div>
+<br />
+<br />
+<div class="row">
+	<h2>{{course.title}}</h2>
+	<br />
+	<br />
+	<div ng-repeat="topic in course.topics">
+		<a href="#" onclick="return false;"><i class="glyphicon glyphicon-play"></i></a> <span>{{topic}}</span>
+	</div>
+	<div class="pull-right">
+		<a href="#/">학습 리스트로 돌아가기</a>
+	</div>
+</div>

@@ -19,6 +19,10 @@
 	<script src="/bower_components/slick-carousel/slick/slick.js"></script>
 	<script src="/front-src/js/slick.min.js"></script>
 
+	<!--[if lt IE 9]>
+	<script src="/bower_components/html5shiv/dist/html5shiv.js"></script>
+	<![endif]-->
+
 </head>
 <body>
 	<div ng-app="aUi.component.carousel">
@@ -26,7 +30,7 @@
 		<section id="features" class="blue">
 			<div class="content">
 				<h2>Single Item</h2>
-				<slick class="slider single-item">
+				<div slick class="slider single-item">
 					<div>
 						<h3>1</h3>
 					</div>
@@ -45,12 +49,12 @@
 					<div>
 						<h3>6</h3>
 					</div>
-				</slick>
+				</div>
 				<br>
 				<hr/>
 
 				<h2>Multiple Items</h2>
-				<slick infinite=true slides-to-show=3 slides-to-scroll=3 class="slider multiple-items">
+				<div slick infinite=true slides-to-show=3 slides-to-scroll=3 class="slider multiple-items">
 					<div>
 						<h3>1</h3>
 					</div>
@@ -78,42 +82,43 @@
 					<div>
 						<h3>9</h3>
 					</div>
-				</slick>
+				</div>
 				<hr/>
 
 				<h2>One At A Time</h2>
-				<slick dots=true infinite=false speed=300 slides-to-show=5 touch-move=false slides-to-scroll=1 class="slider one-time">
+				<div slick dots=true infinite=false speed=300 slides-to-show=5 touch-move=false slides-to-scroll=1 class="slider one-time">
 					<div><h3>1</h3></div>
 					<div><h3>2</h3></div>
 					<div><h3>3</h3></div>
 					<div><h3>4</h3></div>
 					<div><h3>5</h3></div>
 					<div><h3>6</h3></div>
-				</slick>
+				</div>
 				<br>
 				<hr/>
 
 				<h2>Lazy Loading</h2>
-				<slick lazy-load='ondemand' slides-to-show=3 slides-to-scroll=1 class="slider lazy">
+				<div slick lazy-load='ondemand' slides-to-show=3 slides-to-scroll=1 class="slider lazy">
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz1.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz2.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz3.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz4.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz5.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz6.png"/></div></div>
-				</slick>
+				</div>
 				<br>
 				<hr/>
 
 				<h2>fade</h2>
-				<slick fade='true' dots=true infinite=true css-ease="linear" class="slider">
+				<div slick fade='true' dots=true infinite=true css-ease="linear" class="slider">
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz1.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz2.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz3.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz4.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz5.png"/></div></div>
 					<div><div class="image"><img data-lazy="http://vasyabigi.github.io/angular-slick/images/lazyfonz6.png"/></div></div>
-				</slick>
+				</div>
+
 			</div>
 		</section>
 
@@ -121,7 +126,7 @@
 
 	<script type='text/javascript' id="__bs_script__">
 		//<![CDATA[
-		document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.7.1.js'><\/script>".replace("HOST", location.hostname));
+		document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js'><\/script>".replace("HOST", location.hostname));
 		//]]>
 	</script>
 </body>

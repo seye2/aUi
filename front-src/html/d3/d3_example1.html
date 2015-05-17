@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+        .axis path,
+        .axis line{
+            fill: none;
+            stroke:black;
+            shape-rendering:crispEdge;
+        }
+
+        .axis text{
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+
+        h1{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .tick
+        {
+            stroke-dasharray: 1, 2;
+        }
+    </style>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/lodash/lodash.min.js"></script>
+    <script src="/bower_components/d3/d3.min.js"></script>
+    <script src="/front-src/js/d3.1.min.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="/bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div ng-app="aUi.component.d3">
+
+    <div ng-controller="SalesController">
+        <h1>오늘의 sales chart</h1>
+        <div linear-chart chart-data="salesData">
+
+        </div>
+    </div>
+
+</div>
+
+<script type='text/javascript' id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js'><\/script>".replace("HOST", location.hostname));
+    //]]>
+</script>
+</body>
+</html>

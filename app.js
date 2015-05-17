@@ -45,8 +45,16 @@ app.get('/box_shadow', function(req, res) {
     res.sendFile(path.join(__dirname + '/front-src/html/scss/box_shadow.html'));
 });
 
-app.get('/bezier', function(req, res) {
-    res.sendFile(path.join(__dirname + '/front-src/html/scss/bezier.html'));
+app.get('/d3_example1', function(req, res) {
+    res.sendFile(path.join(__dirname + '/front-src/html/d3/d3_example1.html'));
+});
+
+app.get('/course', function(req, res) {
+    res.sendFile(path.join(__dirname + '/front-src/html/course/index.html'));
+});
+
+app.get('/course/home', function(req, res) {
+    res.sendFile(path.join(__dirname + '/front-src/template/course/home.html'));
 });
 
 app.get('/dotjs', function(req, res) {

@@ -1,0 +1,103 @@
+//colors
+$black_8: rgba(0, 0, 0, 0.08);
+$white_80: rgba(255,255,255,.8);
+$color_froly_approx: #fa787e;
+$alto: #dbdbdb;
+
+//fonts
+$font_0: Segoe UI;
+$font_1: Arial;
+$font_2: Helvetica;
+$font_3: sans-serif;
+$font_4: Comic Sans MS;
+
+.view-container {
+    position: relative;
+}
+.view-list {
+    margin-top: 1%;
+> {
+article {
+h1 {
+    font-size: 125%;
+    line-height: 120%;
+    margin-bottom: 2%;
+}
+> div > {
+img {
+    height: 80px;
+    float: left;
+    margin-right: 4%;
+}
+time {
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-weight: bold;
+    float: right;
+    margin-left: 2%;
+    text-transform: uppercase;
+}
+address {
+    font-family: $font_0, $font_1, $font_2, $font_3;
+    font-size: 95%;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+}
+}
+.article-container-full-width {
+img {
+    float: none;
+    display: block;
+    margin: auto;
+}
+address {
+    text-align: center;
+}
+}
+}
+}
+.article-left-content {
+    border-bottom: solid 1px $black_8;
+//Instead of the line below you could use @includebox-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+box-shadow: 0 1px $white_80;
+    min-height: 100px;
+    padding: 20px;
+}
+.article-container-full-width {
+    margin: 6px;
+    float: left;
+    width: 110px;
+    height: 140px;
+    border-bottom: solid 0 transparent;
+    padding: 1.5% .5%;
+}
+#ng-view {
+    position: relative;
+}
+span[data-ng-show] {
+    color: $color_froly_approx;
+}
+.thumbnail {
+    padding-bottom: 20px;
+    margin: 10px;
+    background-color: $alto;
+.caption {
+    text-align: center;
+    padding-top: 20px;
+    font-family: $font_4;
+}
+}
+.voting-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.right {
+    clear: right;
+    float: right;
+}
+small.right {
+    clear: right;
+    float: right;
+}
