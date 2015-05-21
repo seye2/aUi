@@ -1,0 +1,23 @@
+<div courseDetail class="thumbnail">
+    <div class="caption"><strong>{{course.title}}</strong></div>
+    <div ng-show="viewDetails">
+        <div style="text-align:center;">
+            {{couse.topic}}
+        </div>
+
+        <span style="margin-right:9px;">Level: {{course.level}}</span>
+        <span class="right">Category: {{course.category}}</span>
+        <br />
+        <span class="left" style="margin-right:9px;">Rated:{{course.rating}}/5}}</span>
+    </div>
+    <div ng-hide="viewDetails">
+        Total Views:{{course.totalViews}} <br />
+        Last Week:{{course.lastWeekView}} <br />
+
+    </div>
+    <div class="left"><a href="#/course/{{course.id}}">View Course</a></div>
+    <div class="right">
+        <button class="right btn-link" ng-show="!viewDetails">Details</button>
+        <button class="right btn-link" ng-show="viewDetails">Statistics</button>
+    </div>
+</div>

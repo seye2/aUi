@@ -1,6 +1,6 @@
 // set angular module
 angular.module('aUi.component',['aUi.component.courseApp']);
-angular.module('aUi.component.courseApp',['ngRoute','ngAnimate'])
+angular.module('aUi.component.courseApp',['ngRoute','ngAnimate','courseAnimations'])
 	.config(function($locationProvider,$routeProvider) {
 		$locationProvider.html5Mode(true);
 		$routeProvider.when('/course',{
@@ -133,4 +133,21 @@ angular.module('aUi.component.courseApp',['ngRoute','ngAnimate'])
 		} else {
 			$scope.course=coursesDataSvc.getCourse(1);
 		}
-	});
+	})
+	.directive('courseDetails',function($animate) {
+		return {
+			scope:true,
+			templateUrl:'/front-src/template/course/courseDetail.html',
+			link:function(scope,elem,attrs){
+				scope.viewDetails=true;
+				elem.find('button').bind('click',function() {
+					$animate.addClass(elem,"switching",function(){
+						scope.viewDetails=!scope.viewDetails;
+						scope.$apply();
+						elem.removeClass('switching');
+
+					});
+				})
+			}
+		}
+	})
