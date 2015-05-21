@@ -10,7 +10,7 @@ aUi는 angularJS template module입니다.
 ##폴더 구조 / 설명
     .
     ├── front-src                   # HTML,CSS, Javascript files
-        ├── dotjs               # express-dot-engine example
+        ├── dotjs                   # express-dot-engine example
         ├── html                    # all HTML
             ├── scss                # sass,compass example
         ├── template                # piece of angular html (contents)
@@ -68,6 +68,7 @@ $ sudo apt-get install ruby gems
 install packages using ruby gems(sass,compass)
 <pre>
 $ sudo apt-get install rubygems
+$ sudo npm install -g node-sass
 </pre>
 
 관련 패키지 설치
